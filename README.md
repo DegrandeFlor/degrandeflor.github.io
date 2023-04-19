@@ -1,2 +1,3 @@
-# HTML5 boilerplate
-This is my HTML5 boilerplate. I use it to build fast, robust, and adaptable web apps or sites.
+# BIP Prototype Team 3
+
+> > > > > > > 561eabe0b9aea63f6966c220cf66cab4bebb45d1
