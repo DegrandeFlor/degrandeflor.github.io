@@ -1,5 +1,5 @@
 "use strict";
-let htmlPassword;
+let htmlPassword, password;
 const makePass = function (length) {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -9,16 +9,30 @@ const makePass = function (length) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
       counter += 1;
     }
-    console.log(result);
-    let htmlString = '';
-    htmlString += `<p>${result}</p>`;
-    htmlPassword.innerHTML = htmlString;
+    return result;
 };
+
+const showPass = function(password) {
+  let htmlString = '';
+  htmlString += `<h1>${password}</h1>`;
+  htmlPassword.innerHTML = htmlString;
+}
 
 const init = function () {
     htmlPassword = document.querySelector('.js-password');
     console.info("JS running");
-    makePass(10);
+    password = makePass(10);
+    showPass(password);
+    setTimeout(function(){
+      showPass('');
+    }, 3000);
+};
+
+const listenToClickAddTrain = function() {
+  const button = document.querySelector('.js-add-train');
+  button.addEventListener('click', function() {
+    console.info('toevoegen nieuwe trein');
+  });
 };
 
 
