@@ -28,12 +28,4 @@ const init = function () {
     }, 3000);
 };
 
-const listenToClickAddTrain = function() {
-  const button = document.querySelector('.js-add-train');
-  button.addEventListener('click', function() {
-    console.info('toevoegen nieuwe trein');
-  });
-};
-
-
 document.addEventListener("DOMContentLoaded", init);
