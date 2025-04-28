@@ -11,7 +11,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/degrandeflor.github.io/', // CHANGE THIS to your repo name for GitHub Pages
+  base: '/', // CHANGE THIS to your repo name for GitHub Pages
   plugins: [
     react(),
     tailwindcss()
